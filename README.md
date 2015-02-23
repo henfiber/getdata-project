@@ -3,7 +3,6 @@ Getting and Cleaning Data Course Project
 Wearable computing - Movement dataset
 ----------------------
 
-Ilias Kotinas
 Feb, 2015
 
 ####About
@@ -15,7 +14,7 @@ Data for this project has been provided on the course description page and can b
 [Data](http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 ## Synopsis
-This file will result in a tidy version of the "Human Activity Recognition Using Smartphones Dataset" supplied for the assignment.
+This project will result in a tidy version of the "Human Activity Recognition Using Smartphones Dataset" supplied for the assignment.
 
 ##Download Data
 
