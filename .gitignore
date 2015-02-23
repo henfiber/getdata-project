@@ -5,4 +5,7 @@
 # Ignore linux editor files
 *~
 
+# Exclude data
+data/*
+
 
