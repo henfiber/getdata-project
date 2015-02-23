@@ -19,16 +19,16 @@ This file will result in a tidy version of the "Human Activity Recognition Using
 
 ##Download Data
 
-After the data has been downloaded, place following files into working directory:
+Download and extract the UCI zip file into the data directory, so that the input files are located as follows:
 
-1. activity_labels.txt
-2. features.txt
-3. subject_test.txt
-4. subject_train.txt
-5. X_test.txt
-6. X_train.txt
-7. y_test.txt
-8. y_train.txt
+1. data/activity_labels.txt
+2. data/features.txt
+3. data/test/subject_test.txt
+4. data/train/subject_train.txt
+5. data/test/X_test.txt
+6. data/train/X_train.txt
+7. data/test/y_test.txt
+8. data/train/y_train.txt
 
 ## Tidy data process
 This assignment requires a function named "run_analysis". In summary, the function merges the `test` and `training` data for subjects and features, subsets data for only the features that are a measurement of mean or standard deviation, reads activity labels resulting in a data set of combined subject,features and activity data, melts and reshapes data, and finally outputs to ordered tidy data set.
@@ -49,6 +49,4 @@ This assignment requires a function named "run_analysis". In summary, the functi
 
     The codebook providing a description of tidy.txt
 
-After run_analysis.R is run, "data" folder will contain Dataset.zip (initial data downloaded from the Internet), and tidy.txt, the tidy dataset generated for the project.
-"UCI HAR Dataset" folder contains the original data unziped from Dataset.zip.
 
