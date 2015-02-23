@@ -1,15 +1,16 @@
 run_analysis <- function() {
-	# Load required libraries
-    library(plyr); library(dplyr); library(reshape2)
 
-	# Read in subjects for train and test set
-	subject_test <- read.table("data/test/subject_test.txt", col.names=c("Subject"))
-	subject_train <- read.table("data/train/subject_train.txt", col.names=c("Subject"))
+	# Load required libraries
+	library(plyr); library(dplyr); library(reshape2)
+
+	# Load subjects for train and test set
+	subject_test <- read.table("data/test/subject_test.txt", col.names = c("Subject"))
+	subject_train <- read.table("data/train/subject_train.txt", col.names = c("Subject"))
 
 	# Combine train and test sets
 	subject_combined <- rbind(subject_train, subject_test)
 
-	# Read in features for train and test.
+	# Load features for train and test.
 	# Note: this is the data for each feature, not the feature labels.
 	features_test <- read.table("data/test/X_test.txt")
 	features_train <- read.table("data/train/X_train.txt")
@@ -17,8 +18,8 @@ run_analysis <- function() {
 	# Combine training and test data
 	features_data <- rbind(features_test, features_train)
 
-	# Read in list of features. Note: this is a list of the features names or labels. Not the features data
-	feature_list <- read.table("data/features.txt", col.names=c("index", "feature_labels"))
+	# Load list of features (the list of the features names or labels - not the actual data)
+	feature_list <- read.table("data/features.txt", col.names = c("index", "feature_labels"))
 
 
 	# Create 1 dimensional character vector containing feature labels from features_list data frame
@@ -57,7 +58,7 @@ run_analysis <- function() {
 	# Combine Actitivies, Subjects and Features all into one data frame
 	all_df <- cbind(features_data, activities_all, subject_combined)
 
-	# Melt data frame for reshaping
+	# Melt data frame (reshape)
 	tidydf <- melt(all_df, id=c("Subject", "Activity"), measure.vars=feature_list)
 	# Reshape into tidy data frame by mean using the reshape2 package
 	tidydf <- dcast(tidydf, Activity + Subject ~ variable, mean)
@@ -66,9 +67,9 @@ run_analysis <- function() {
 
 	# Reindex Rows and move Subject to Column 1
 	rownames(tidydf) <- 1:nrow(tidydf)
-	tidydf <- tidydf[,c(2,1,3:68)]
+	tidydf <- tidydf[, c(2,1,3:68)]
 
-	# Output file
+	# Output the tidy data file
 	write.table(tidydf, file="tidy_data.txt")
 
 }
