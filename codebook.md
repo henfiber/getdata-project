@@ -1,9 +1,11 @@
-SUMMARY
+Summary
 
-    180 rows (30 Subjects X 6 Activities)
-    68 columns (Subject, Activity, 66 feature means)
+    180 rows : 30 Subjects X 6 Activities ("long" format)
+    68 columns : Subject, Activity and 66 feature means
     Each row represents one observation per activity for 66 feature means
-    For the features only the variables with -mean or -std from the raw data were used in this analysis because I was only interested in the mean and standard deviation of the feature values, and not other various means or standard deviations.
+    For the features only the variables with -mean or -std from the raw data were used in this analysis
+    because we were only interested in the mean and standard deviation of the feature values,
+    and not other various means or standard deviations.
 
 Description of variables and units
 
@@ -11,8 +13,7 @@ Description of variables and units
     The second column is "Activity", and can take the following 6 values
         LAYING / SITTING / STANDING / WALKING / WALKING DOWNSTAIRS / WALKING UPSTAIRS
     Columns 3 to 68 contain the mean/std of each feature from the raw data.
-    For example, tBodyAcc-mean()-X is the average of all tBodyAcc-mean()-X means for a given activity.
-    They have been normalized to a number in the range [0-1]
+    For example, tBodyAcc-mean()-X is the average of all tBodyAcc-mean()-X means for a given activity
 
 Columns
 
