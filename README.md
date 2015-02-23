@@ -38,15 +38,14 @@ This assignment requires a function named "run_analysis". In summary, the functi
 
   - run_analysis.R
 
-    Read datasets from the Internet and execute the tasks asked by the assignement.
-    See CodeBook.md for a detailed description of the steps executed by run_analysis.R
+    Create a tidy dataset as requested by the assignment. The code contains comments which explain the process.
 
   - tidy_data.txt
 
-    Resulting tidy dataset.
+    The Resulting tidy dataset
 
   - CodeBook.md
 
-    The codebook providing a description of tidy.txt
+    The codebook providing a description of tidy_data.txt
 
 
